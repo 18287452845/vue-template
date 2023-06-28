@@ -8,13 +8,11 @@
       "path": "./tsconfig.app.json"
     }
   ],
-
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"]
     },
-
     "types": ["element-plus/global"]
   }
 }
