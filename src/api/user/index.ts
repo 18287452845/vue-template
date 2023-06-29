@@ -6,9 +6,7 @@ enum API {
   getUserInfo = '/getUserInfo',
 }
 export const login = (data: LoginForm) => {
-  request.post(API.login, data).then((res) => {
-    console.log(res)
-  })
+  request.post(API.login, data)
 }
 export const logout = () => {
   request.post(API.logout)

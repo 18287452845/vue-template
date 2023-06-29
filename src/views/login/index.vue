@@ -36,6 +36,8 @@
 import { User, Lock } from '@element-plus/icons-vue'
 import { onMounted, reactive } from 'vue'
 import { login } from '@/api/user/index'
+import userStore from '@/stores/modules/user'
+let store = userStore()
 let loginForm = reactive({
   name: '',
   password: '',
