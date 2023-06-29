@@ -22,7 +22,9 @@
           </el-form-item>
 
           <el-form-item>
-            <el-button class="login_btn" type="primary" @click="loginHandler">登录</el-button>
+            <el-button class="login_btn" type="primary" @click="loginHandler">
+              登录
+            </el-button>
           </el-form-item>
         </el-form>
       </el-col>
@@ -31,40 +33,39 @@
 </template>
 
 <script lang="ts" setup>
-import { User, Lock } from "@element-plus/icons-vue";
-import { onMounted, reactive } from "vue";
-import { login } from "@/api/user/index";
+import { User, Lock } from '@element-plus/icons-vue'
+import { onMounted, reactive } from 'vue'
+import { login } from '@/api/user/index'
 let loginForm = reactive({
-  name: "",
-  password: "",
-});
-const loginHandler=(() => {
-  login(loginForm);
-});
+  name: '',
+  password: '',
+})
+const loginHandler = () => {
+  login(loginForm)
+}
 </script>
 
 <style lang="scss" scoped>
 .container {
   width: 100vw;
   height: 100vh;
-  background-image: url("@/assets/images/login-bg.jpg");
+  background-image: url('@/assets/images/login-bg.jpg');
   background-size: cover;
 }
 .loginForm {
-  
   padding: 30px 20px;
-  background-color: rgba($color: #cecaca, $alpha: .6);
+  background-color: rgba($color: #cecaca, $alpha: 0.6);
   position: relative;
   border-radius: 20px;
   top: 30vh;
   width: 35vw;
   height: 40vh;
-  h1{
+  h1 {
     font-size: 40px;
     color: #fff;
     margin-bottom: 20px;
   }
-  .login_btn{
+  .login_btn {
     width: 100%;
   }
 }

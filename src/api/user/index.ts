@@ -13,6 +13,4 @@ export const login = (data: LoginForm) => {
 export const logout = () => {
   request.post(API.logout)
 }
-export const getUserInfo = () => {
-
-}
+export const getUserInfo = () => {}

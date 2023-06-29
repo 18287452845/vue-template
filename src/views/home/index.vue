@@ -1,13 +1,7 @@
 <template>
-  <div>
-    index
-  </div>
+  <div>index</div>
 </template>
 
-<script setup>
+<script setup></script>
 
-</script>
-
-<style>
-
-</style>
+<style></style>
