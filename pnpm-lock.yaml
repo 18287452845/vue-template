@@ -15,7 +15,7 @@ dependencies:
     specifier: ^2.3.6
     version: 2.3.6(vue@3.3.4)
   pinia:
-    specifier: ^2.1.3
+    specifier: ^2.1.4
     version: registry.npmmirror.com/pinia@2.1.4(typescript@5.0.4)(vue@3.3.4)
   reset.scss:
     specifier: ^1.0.0
