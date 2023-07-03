@@ -22,7 +22,12 @@
           </el-form-item>
 
           <el-form-item>
-            <el-button :loading="loading" class="login_btn" type="primary" @click="loginHandler">
+            <el-button
+              :loading="loading"
+              class="login_btn"
+              type="primary"
+              @click="loginHandler"
+            >
               登录
             </el-button>
           </el-form-item>
@@ -34,7 +39,7 @@
 
 <script lang="ts" setup>
 import { User, Lock } from '@element-plus/icons-vue'
-import { onMounted, reactive,ref } from 'vue'
+import { onMounted, reactive, ref } from 'vue'
 import { login } from '@/api/user/index'
 import userStore from '@/stores/modules/user'
 import { ElNotification } from 'element-plus'
@@ -46,25 +51,28 @@ let loginForm = reactive({
   name: '',
   password: '',
 })
-let loading=ref(false)
+let loading = ref(false)
 const loginHandler = () => {
-  loading.value=true
-  store.userLogin(loginForm).then((res)=>{
-    loading.value=false
-    $router.push('/')
-    ElNotification({
-      title: `${getTime()}`,
-      message: '欢迎回来',
-      type: 'success'
+  loading.value = true
+  store
+    .userLogin(loginForm)
+    .then((res) => {
+      loading.value = false
+      $router.push('/')
+      ElNotification({
+        title: `${getTime()}`,
+        message: '欢迎回来',
+        type: 'success',
+      })
     })
-  }).catch((err)=>{
-    loading.value=false
-    ElNotification({
-      title: `登录失败`,
-      message: '用户名或密码错误',
-      type: 'error'
+    .catch((err) => {
+      loading.value = false
+      ElNotification({
+        title: `登录失败`,
+        message: '用户名或密码错误',
+        type: 'error',
+      })
     })
-  })
 }
 </script>
 

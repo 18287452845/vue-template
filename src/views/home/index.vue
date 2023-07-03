@@ -1,7 +1,5 @@
 <template>
-  <el-button text @click="openDialog">
-    click to open the Dialog
-  </el-button>
+  <el-button text @click="openDialog">click to open the Dialog</el-button>
 
   <el-dialog
     v-model="dialogVisible"
@@ -26,9 +24,8 @@ import { ref } from 'vue'
 import { ElMessageBox } from 'element-plus'
 
 const dialogVisible = ref(false)
-const openDialog=()=>{
-  dialogVisible.value=true;
-
+const openDialog = () => {
+  dialogVisible.value = true
 }
 const handleClose = (done: () => void) => {
   ElMessageBox.confirm('Are you sure to close this dialog?')
